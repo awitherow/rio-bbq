@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+
+body,
+html {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* colors
+#009B3A
+#CBAC00
+#FEDF00 - OG
+#FFFF33
+#000043 
+#002776 - OG
+#333376
+#FFFFFF
+
+*/
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  border: 1px solid black;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  margin: 0 8px;
+  color: black;
+  text-decoration: none;
+}
+
+.button.primary {
+  border-color: #006807;
+  background: #009b3a;
+  color: white;
+}
+
+.button.secondary {
+  background: #fedf00;
+  border-color: #cbac00;
+}
+
+.separator {
+  height: 1px;
+  background: white;
+  width: 222px;
+}
+
+nav {
+  position: absolute;
+  right: 32px;
+  top: 16px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 8px;
+}
+
+nav ul li a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: light;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #fedf00;
+}
+
+.top {
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background: url(./img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.top.half {
+  min-height: 50vh;
+}
+
+.top h1 {
+  font-size: 700%;
+  margin: 0;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.top h2 {
+  font-weight: 100;
+  margin: 8px 0;
+}

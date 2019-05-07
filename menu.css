@@ -1,0 +1,28 @@
+.menu {
+  text-align: center;
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.menu-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.menu-item {
+  width: 300px;
+  margin: 8px;
+  display: inline-block;
+  text-align: left;
+  position: relative;
+}
+
+.menu-item .price-tag {
+  position: absolute;
+  z-index: 9;
+  color: white;
+  right: 8px;
+  top: 8px;
+}
