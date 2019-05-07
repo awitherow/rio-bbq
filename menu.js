@@ -42,7 +42,7 @@ function getMenuItems() {
           id: "mexican-dog",
           title: "Mexican Dog",
           description:
-            "Topped with our delicious Homemade Chipotle Sour Cream, Pico de Gallo Salsa and Jalapenos.",
+            "Comes with our Homemade Chipotle Sour Cream, Pico de Gallo Salsa and Jalapenos.",
           price: "$7",
           img: "https://via.placeholder.com/300x200",
         },
@@ -58,15 +58,15 @@ function getMenuItems() {
           id: "pulled-chicken",
           title: "Pulled Chicken",
           description:
-            "Tender slow cooked pulled chicken seasonsed with our specialty house blend of spices!",
+            "Tender slow cooked pulled chicken seasonsed with our specialty house blend!",
           price: "$9",
           img: "https://via.placeholder.com/300x200",
         },
         {
           id: "pulled-pork",
-          title: "Pulled Prok",
+          title: "Pulled Pork",
           description:
-            "Slow cooked to perfection, our Big Island Kalua Pulled Pork Sandwich will hit the spot, every time.",
+            "Slow cooked to perfection, our Big Island Kalua Pulled Pork Sandwich will hit the spot!",
           price: "$9",
           img: "https://via.placeholder.com/300x200",
         },
@@ -186,7 +186,7 @@ function getMenuItems() {
         {
           id: "chixo-skewer",
           title: "Chixo",
-          description: "Steak, Onion, Tomato and Green Pepper",
+          description: "Delicious mix of Steak, Onion, Tomato and Green Pepper",
           price: "$5",
           img: "https://via.placeholder.com/300x200",
         },
