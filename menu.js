@@ -436,29 +436,29 @@ function renderMenuItems() {
   categories.map(function(category) {
     container.innerHTML +=
       "<div class='category'>" +
-      "<h2>" +
-      category.title +
-      "</h2>" +
       "<h3>" +
-      category.description +
+      category.title +
       "</h3>" +
+      "<h4>" +
+      category.description +
+      "</h4>" +
       "<div class='menu-items'>";
 
     if (category.category === "plate-lunch") {
       category.select.map(function(step) {
         container.innerHTML +=
-          "<h4>" +
+          "<h5>" +
           step.title +
-          "</h4>" +
+          "</h5>" +
           step.items.map(function(choice) {
             return (
               "<div class='menu-item'>" +
               "<img src='" +
               choice.img +
               "' />" +
-              "<h4>" +
+              "<h6>" +
               choice.title +
-              "</h4>" +
+              "</h6>" +
               "</div>"
             );
           });
@@ -473,9 +473,9 @@ function renderMenuItems() {
           "<img src='" +
           item.img +
           "' />" +
-          "<h4>" +
+          "<h6>" +
           item.title +
-          "</h4>" +
+          "</h6>" +
           "<p>" +
           item.description +
           "</p>" +

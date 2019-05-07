@@ -9,29 +9,30 @@
     <meta name="author" content="RIO Brazilian BBQ Oahu" />
 
     <link rel="stylesheet" href="style.css?v=1.0" />
+    <link rel="stylesheet" href="menu.css?v=1.0" />
   </head>
 
   <body>
     <nav class="header">
       <ul>
-        <li><a class="active" href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./menu.html">About</a></li>
         <li><a href="./menu.html">Menu</a></li>
         <li><a href="./photos.html">Photos</a></li>
         <li><a href="./location.html">Location</a></li>
-        <li><a href="./testimonials.html">Testimonials</a></li>
+        <li><a class="active" href="./testimonials.html">Testimonials</a></li>
       </ul>
     </nav>
 
-    <div class="top">
-      <h1>RIO</h1>
-      <div class="separator"></div>
-      <h2>Brazilian BBQ - OAHU</h2>
-      <div class="button-container">
-        <a class="button primary" href="./menu.html">Menu</a>
-        <a class="button secondary" href="">Location</a>
-      </div>
+    <div class="top half">
+      <h1>Menu</h1>
     </div>
+
+    <div class="menu">
+      <h1>Authentic Brazilian BBQ</h1>
+      <div id="menu-items"></div>
+    </div>
+
     <script src="menu.js"></script>
   </body>
 </html>
