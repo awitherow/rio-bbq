@@ -1,0 +1,48 @@
+.menu {
+  text-align: center;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.menu-item {
+  width: 300px;
+  margin: 16px 8px;
+  display: inline-block;
+  text-align: left;
+  position: relative;
+}
+
+.menu-item .price-tag {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  right: 0;
+  top: 0;
+  padding: 4px 16px;
+  font-weight: bold;
+  background: red;
+  font-size: 18px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.menu-item img {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.menu-item h6 {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.menu-item p {
+  margin: 0;
+}

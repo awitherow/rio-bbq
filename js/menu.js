@@ -446,22 +446,20 @@ function renderMenuItems() {
 
     if (category.category === "plate-lunch") {
       category.select.map(function(step) {
-        container.innerHTML +=
-          "<h5>" +
-          step.title +
-          "</h5>" +
-          step.items.map(function(choice) {
-            return (
-              "<div class='menu-item'>" +
-              "<img src='" +
-              choice.img +
-              "' />" +
-              "<h6>" +
-              choice.title +
-              "</h6>" +
-              "</div>"
-            );
-          });
+        var choices = "";
+        step.items.map(function(choice) {
+          choices +=
+            "<div class='menu-item'>" +
+            "<img src='" +
+            choice.img +
+            "' />" +
+            "<h6>" +
+            choice.title +
+            "</h6>" +
+            "</div>";
+        });
+
+        container.innerHTML += "<h5>" + step.title + "</h5>" + choices;
       });
     } else {
       category.items.map(function(item) {
@@ -484,16 +482,18 @@ function renderMenuItems() {
     }
 
     if (category.addons) {
+      var addons = "";
+      category.addons.items.map(function(addon) {
+        var desc = addon.description
+          ? "<p><small>" + addon.description + "</small></p>"
+          : "";
+        addons += "<li>" + addon.name + " - " + addon.price + desc + "</li>";
+      });
       container.innerHTML +=
         "<h3>" +
         category.addons.title +
         "</h3><ul class='addons'>" +
-        category.addons.items.map(function(addon) {
-          var desc = addon.description
-            ? "<p><small>" + addon.description + "</small></p>"
-            : "";
-          return "<li>" + addon.name + " - " + addon.price + desc + "</li>";
-        }) +
+        addons +
         "</ul>";
     }
 

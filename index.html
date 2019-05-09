@@ -7,20 +7,44 @@
     <title>RIO | Brazilian BBQ Oahu</title>
     <meta name="description" content="" />
     <meta name="author" content="RIO Brazilian BBQ Oahu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css?v=1.0" />
+    <link rel="stylesheet" href="css/style.css?v=1.0" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
+    <div id="mobileMenu" class="popup">
+      <button class="closeButton" id="closeMenu">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <a class="active" href="./index.html">Home</a>
+      <a href="pages/about.html">About</a>
+      <a href="pages/menu.html">Menu</a>
+      <a href="pages/photos.html">Photos</a>
+      <a href="pages/location.html">Location</a>
+      <a href="pages/testimonials.html">Testimonials</a>
+    </div>
+
     <nav class="header">
       <ul>
         <li><a class="active" href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./menu.html">Menu</a></li>
-        <li><a href="./photos.html">Photos</a></li>
-        <li><a href="./location.html">Location</a></li>
-        <li><a href="./testimonials.html">Testimonials</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/menu.html">Menu</a></li>
+        <li><a href="pages/photos.html">Photos</a></li>
+        <li><a href="pages/location.html">Location</a></li>
+        <li><a href="pages/testimonials.html">Testimonials</a></li>
       </ul>
+      <button id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
 
     <div class="top">
@@ -28,10 +52,12 @@
       <div class="separator"></div>
       <h2>Brazilian BBQ - OAHU</h2>
       <div class="button-container">
-        <a class="button primary" href="./menu.html">Menu</a>
+        <a class="button primary" href="pages/menu.html">Menu</a>
         <a class="button secondary" href="">Location</a>
       </div>
     </div>
-    <script src="menu.js"></script>
+
+    <script src="js/menu.js"></script>
+    <script src="js/share.js"></script>
   </body>
 </html>
