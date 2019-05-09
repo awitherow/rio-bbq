@@ -3,10 +3,43 @@
   max-width: 1024px;
   margin: 0 auto;
   padding: 8px;
+  position: relative;
+}
+
+#scroll-top-container {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 3;
+}
+
+#scroll-top-container button {
+  border: none;
+  background: none;
+}
+
+#scroll-top-container i {
+  font-size: 24px;
+  color: #009b3a;
+}
+
+#quick-scroll ul {
+  list-style-type: none;
+  padding: 0;
+}
+#quick-scroll ul li {
+  display: inline-block;
+  padding: 8px;
+  text-transform: uppercase;
+}
+
+#quick-scroll ul li a {
+  text-decoration: none;
+  color: #009b3a;
 }
 
 .category {
-  margin: 64px auto;
+  padding: 64px auto;
 }
 
 .menu-items {

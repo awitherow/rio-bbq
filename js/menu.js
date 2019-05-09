@@ -1,7 +1,7 @@
 function getMenuItems() {
   return [
     {
-      category: "hot-dogs",
+      id: "hot-dogs",
       title: "Hot Dogs",
       description:
         "All of hot dogs come with a delicious Nathans Famous Sausage Link, served on a perfectly toasted bun. See some of our most popular items below, or customise your order at Rio Brazillian BBQ! ",
@@ -49,7 +49,7 @@ function getMenuItems() {
       ],
     },
     {
-      category: "pulled-sandwiches",
+      id: "pulled-sandwiches",
       title: "Pulled Sandwiches",
       description:
         "Try our variety of slow cooked meats on our unique toasted French Baguette with our Signature House Mayo, and customize your Pulled Sandwich with our tasty addons!",
@@ -107,7 +107,7 @@ function getMenuItems() {
       },
     },
     {
-      category: "kabobs",
+      id: "kabobs",
       title: "Kabobs (Skewers)",
       description:
         "Enjoy our fire roasted skewers, with plenty of options to choose from. A delicious snack or on the go, or with a drink in the other hand!",
@@ -224,7 +224,7 @@ function getMenuItems() {
       },
     },
     {
-      category: "plate-lunch",
+      id: "plate-lunch",
       title: "Plate Lunch",
       description:
         "Pick your choice of white or brown rice, mac salad or mixed greens and top it off with your choice of Chicken, Beef or Steak!",
@@ -286,7 +286,7 @@ function getMenuItems() {
       ],
     },
     {
-      category: "sandwiches",
+      id: "sandwiches",
       title: "Sandwiches",
       description:
         "Try one of our delicious sandwiches on our Signature Toasted Baguette. All are topped with Homemade Garlic Mayonaise, Monteray Jack Cheese, Baby Arugala, Alfalfa Sprouts, Cherry Tomato, Carrot, Cucumber and Olive Oil.",
@@ -325,7 +325,7 @@ function getMenuItems() {
       },
     },
     {
-      category: "burgers",
+      id: "burgers",
       title: "Burgers",
       description:
         "Try our Deliciuos 5oz grilled Burgers on our Signature French Bread Buns!",
@@ -370,7 +370,7 @@ function getMenuItems() {
       },
     },
     {
-      category: "sandwiches",
+      id: "sandwiches",
       title: "Drink Menu",
       description:
         "Don't forget to grab a drink with your delicious menu item!",
@@ -429,6 +429,21 @@ function getMenuItems() {
   ];
 }
 
+function renderQuickScroll() {
+  var quickScrollContainer = document.getElementById("quick-scroll");
+  var categories = getMenuItems();
+  var quickLinks = "";
+
+  categories.map(function(category) {
+    quickLinks +=
+      "<li><a href='#" + category.id + "'>" + category.title + "</a></li>";
+  });
+
+  quickScrollContainer.innerHTML +=
+    "<h2>Click to Jump to Menu Section</h2><ul>" + quickLinks + "</ul>";
+}
+renderQuickScroll();
+
 function renderMenuItems() {
   var categories = getMenuItems();
   var container = document.getElementById("categories");
@@ -438,7 +453,7 @@ function renderMenuItems() {
     var addonsContainer = "";
     var customPlateContainer = "";
 
-    if (category.category === "plate-lunch") {
+    if (category.id === "plate-lunch") {
       category.select.map(function(step) {
         var choices = "";
         step.items.map(function(choice) {
@@ -499,7 +514,9 @@ function renderMenuItems() {
     var menuContainer = "<div class='menu-items'>" + menuItems + "</div>";
 
     container.innerHTML +=
-      "<div class='category'>" +
+      "<div class='category' id=" +
+      category.id +
+      ">" +
       "<h3>" +
       category.title +
       "</h3>" +

@@ -9,6 +9,9 @@
   for (var i = 0; i < c.length; i++) {
     c[i].addEventListener("click", closeMenu);
   }
+
+  var scrollTopButton = document.getElementById("scroll-top");
+  scrollTopButton.addEventListener("click", scrollTop);
 })();
 
 function openMenu() {
@@ -41,4 +44,8 @@ function disableScroll() {
 
 function enableScroll() {
   document.getElementsByTagName("body")[0].classList.remove("noScroll");
+}
+
+function scrollTop() {
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
