@@ -86,6 +86,19 @@ html {
   width: 222px;
 }
 
+.separator.dark {
+  background: black;
+  margin: 16px auto;
+}
+
+.separator.fat {
+  height: 2px;
+}
+
+.separator.short {
+  width: 111px;
+}
+
 nav {
   position: absolute;
   right: 32px;
@@ -145,6 +158,8 @@ nav ul li a.active {
   justify-content: center;
   flex-direction: column;
 
+  padding: 16px;
+
   text-align: center;
 
   background: url(../img/bg.jpg) no-repeat center center fixed;
@@ -159,7 +174,7 @@ nav ul li a.active {
 }
 
 .top h1 {
-  font-size: 700%;
+  font-size: 200%;
   margin: 0;
   font-weight: 500;
   line-height: 100%;
@@ -171,7 +186,7 @@ nav ul li a.active {
 }
 
 .top.half h1 {
-  font-size: 300%;
+  font-size: 175%;
   margin: 0;
   font-weight: 500;
   line-height: 100%;
@@ -180,4 +195,32 @@ nav ul li a.active {
 .top.half h2 {
   font-weight: 100;
   margin: 8px 0;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .top h1 {
+    font-size: 700%;
+    margin: 0;
+    font-weight: 500;
+    line-height: 100%;
+  }
+
+  .top h2 {
+    font-weight: 100;
+    margin: 8px 0;
+  }
+
+  .top.half h1 {
+    font-size: 300%;
+    margin: 0;
+    font-weight: 500;
+    line-height: 100%;
+  }
+
+  .top.half h2 {
+    font-weight: 100;
+    margin: 8px 0;
+    font-size: 100%;
+  }
 }

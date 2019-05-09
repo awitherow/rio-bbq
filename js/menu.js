@@ -26,7 +26,7 @@ function getMenuItems() {
           id: "chili-dog",
           title: "Chili Dog",
           description:
-            "Topped with our delicious Homemade Mayo, Hawaian Style  Chilli and topped with Shredded Cheddar Cheese.",
+            "Topped with Homemade Mayo, Hawaian Style  Chilli and topped with Shredded Cheddar Cheese.",
           price: "$7",
           img: "https://via.placeholder.com/300x200",
         },
@@ -431,18 +431,12 @@ function getMenuItems() {
 
 function renderMenuItems() {
   var categories = getMenuItems();
-  var container = document.getElementById("menu-items");
+  var container = document.getElementById("categories");
 
   categories.map(function(category) {
-    container.innerHTML +=
-      "<div class='category'>" +
-      "<h3>" +
-      category.title +
-      "</h3>" +
-      "<h4>" +
-      category.description +
-      "</h4>" +
-      "<div class='menu-items'>";
+    var menuItems = "";
+    var addonsContainer = "";
+    var customPlateContainer = "";
 
     if (category.category === "plate-lunch") {
       category.select.map(function(step) {
@@ -455,15 +449,20 @@ function renderMenuItems() {
             "' />" +
             "<h6>" +
             choice.title +
-            "</h6>" +
-            "</div>";
+            "</h6></div>";
         });
 
-        container.innerHTML += "<h5>" + step.title + "</h5>" + choices;
+        customPlateContainer +=
+          "<h5>" +
+          step.title +
+          "</h5>" +
+          "<div class='menu-items'>" +
+          choices +
+          "</div>";
       });
     } else {
       category.items.map(function(item) {
-        container.innerHTML +=
+        menuItems +=
           "<div class='menu-item'>" +
           "<span class='price-tag'>" +
           item.price +
@@ -489,15 +488,29 @@ function renderMenuItems() {
           : "";
         addons += "<li>" + addon.name + " - " + addon.price + desc + "</li>";
       });
-      container.innerHTML +=
-        "<h3>" +
+      addonsContainer +=
+        "<div class='addons-container'><h3>" +
         category.addons.title +
         "</h3><ul class='addons'>" +
         addons +
-        "</ul>";
+        "</ul></div>";
     }
 
-    container.innerHTML += "</div>";
+    var menuContainer = "<div class='menu-items'>" + menuItems + "</div>";
+
+    container.innerHTML +=
+      "<div class='category'>" +
+      "<h3>" +
+      category.title +
+      "</h3>" +
+      "<h4>" +
+      category.description +
+      "</h4>" +
+      "<div class='separator dark fat short'></div>" +
+      menuContainer +
+      customPlateContainer +
+      addonsContainer +
+      "</div>";
   });
 }
 

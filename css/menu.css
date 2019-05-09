@@ -2,6 +2,11 @@
   text-align: center;
   max-width: 1024px;
   margin: 0 auto;
+  padding: 8px;
+}
+
+.category {
+  margin: 64px auto;
 }
 
 .menu-items {
@@ -9,10 +14,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .menu-item {
-  width: 300px;
+  max-width: 280px;
   margin: 16px 8px;
   display: inline-block;
   text-align: left;
@@ -34,6 +40,7 @@
 }
 
 .menu-item img {
+  max-width: 280px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
 }
@@ -45,4 +52,19 @@
 
 .menu-item p {
   margin: 0;
+}
+
+h3 {
+  font-size: 150%;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-weight: 400;
+  max-width: 768px;
+  margin: 4px auto 0 auto;
+}
+
+.addons-container {
+  text-align: left;
 }
