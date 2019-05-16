@@ -8,34 +8,32 @@
 
 #scroll-top-container {
   position: fixed;
-  right: 24px;
-  bottom: 24px;
+  right: 16px;
+  bottom: 16px;
   z-index: 3;
 }
 
 #scroll-top-container button {
   border: none;
-  background: none;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 8px 16px;
 }
 
 #scroll-top-container i {
   font-size: 24px;
-  color: #009b3a;
+  color: white;
 }
 
 #quick-scroll ul {
   list-style-type: none;
   padding: 0;
+  max-width: 768px;
+  margin: 0 auto;
 }
 #quick-scroll ul li {
   display: inline-block;
-  padding: 8px;
+  margin: 16px 2px;
   text-transform: uppercase;
-}
-
-#quick-scroll ul li a {
-  text-decoration: none;
-  color: #009b3a;
 }
 
 .category {
@@ -44,7 +42,7 @@
 
 .menu-items {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
@@ -56,6 +54,15 @@
   display: inline-block;
   text-align: left;
   position: relative;
+}
+
+.menu-item .info-container {
+  border-left: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  padding: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .menu-item .price-tag {
@@ -70,21 +77,23 @@
   font-size: 18px;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
+  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
 }
 
 .menu-item img {
   max-width: 280px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+  margin-bottom: -5px;
 }
 
 .menu-item h6 {
   font-size: 18px;
-  margin: 8px 0;
+  margin: 0;
 }
 
 .menu-item p {
-  margin: 0;
+  margin: 8px 0 0 0;
 }
 
 h3 {
@@ -96,6 +105,11 @@ h4 {
   font-weight: 400;
   max-width: 768px;
   margin: 4px auto 0 auto;
+}
+
+h5 {
+  font-size: 20px;
+  margin: 16px auto 0 auto;
 }
 
 .addons-container {

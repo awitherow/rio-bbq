@@ -1,17 +1,13 @@
 (function spawnEventListeners() {
   var h = document.getElementById("hamburger");
   h.addEventListener("click", openMenu);
-
   // mobile menu event listeners
   // includes closeButton and all links that are clickable
-  var c = document.getElementById("mobileMenu").childNodes;
 
+  var c = document.getElementById("mobileMenu").childNodes;
   for (var i = 0; i < c.length; i++) {
     c[i].addEventListener("click", closeMenu);
   }
-
-  var scrollTopButton = document.getElementById("scroll-top");
-  scrollTopButton.addEventListener("click", scrollTop);
 })();
 
 function openMenu() {

@@ -1,3 +1,8 @@
+(function() {
+  var scrollTopButton = document.getElementById("scroll-top");
+  scrollTopButton.addEventListener("click", scrollTop);
+})();
+
 function getMenuItems() {
   return [
     {
@@ -436,11 +441,17 @@ function renderQuickScroll() {
 
   categories.map(function(category) {
     quickLinks +=
-      "<li><a href='#" + category.id + "'>" + category.title + "</a></li>";
+      "<li><a class='button primary' href='#" +
+      category.id +
+      "'>" +
+      category.title +
+      "</a></li>";
   });
 
   quickScrollContainer.innerHTML +=
-    "<h2>Click to Jump to Menu Section</h2><ul>" + quickLinks + "</ul>";
+    "<h2>View Our Menu Items!</h2><div class='separator dark fat short'></div><ul>" +
+    quickLinks +
+    "</ul>";
 }
 renderQuickScroll();
 
@@ -462,9 +473,11 @@ function renderMenuItems() {
             "<img src='" +
             choice.img +
             "' />" +
+            "<div class='info-container'>" +
             "<h6>" +
             choice.title +
-            "</h6></div>";
+            "</h6>" +
+            "</div></div>";
         });
 
         customPlateContainer +=
@@ -477,6 +490,7 @@ function renderMenuItems() {
       });
     } else {
       category.items.map(function(item) {
+        var desc = item.description ? "<p>" + item.description + "</p>" : "";
         menuItems +=
           "<div class='menu-item'>" +
           "<span class='price-tag'>" +
@@ -485,12 +499,12 @@ function renderMenuItems() {
           "<img src='" +
           item.img +
           "' />" +
+          "<div class='info-container'>" +
           "<h6>" +
           item.title +
           "</h6>" +
-          "<p>" +
-          item.description +
-          "</p>" +
+          desc +
+          "</div>" +
           "</div>";
       });
     }

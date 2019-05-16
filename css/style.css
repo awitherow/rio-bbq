@@ -11,6 +11,7 @@ html {
 }
 
 /* colors
+#33CE6D
 #009B3A
 #CBAC00
 #FEDF00 - OG
@@ -47,17 +48,46 @@ html {
 .popup .closeButton {
   position: fixed;
   z-index: 2;
-  top: 24px;
-  right: 24px;
+  top: 16px;
+  right: 16px;
   font-size: 24px;
   color: white;
   box-shadow: none;
+  background: rgba(0, 0, 0, 0.75);
+  border-bottom-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border: 0;
+  padding: 8px 16px;
+}
+
+.popup a {
+  margin: 4px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .button-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+.button-container .button {
+  margin: 4px auto;
+}
+
+@media (min-width: 768px) {
+  .button-container {
+    flex-direction: row;
+  }
+
+  .button-container .button {
+    margin: auto 4px;
+  }
 }
 
 .button {
@@ -67,12 +97,13 @@ html {
   margin: 0 8px;
   color: black;
   text-decoration: none;
+  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
 }
 
 .button.primary {
-  border-color: #006807;
+  border-color: #33ce6d;
   background: #009b3a;
-  color: white;
+  color: #faffff;
 }
 
 .button.secondary {
@@ -80,10 +111,17 @@ html {
   border-color: #cbac00;
 }
 
+.button.third {
+  background-color: #335aa9;
+  border-color: #002775;
+  color: white;
+}
+
 .separator {
   height: 1px;
   background: white;
   width: 222px;
+  margin: 0 auto;
 }
 
 .separator.dark {
@@ -101,8 +139,19 @@ html {
 
 nav {
   position: absolute;
-  right: 32px;
+  right: 16px;
   top: 16px;
+  background: rgba(0, 0, 0, 0.75);
+  border-bottom-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+@media (min-width: 768px) {
+  nav {
+    top: 0;
+    right: 0;
+    border-top-right-radius: 0;
+  }
 }
 
 nav #hamburger {
@@ -110,7 +159,9 @@ nav #hamburger {
   font-size: 24px;
   color: white;
   margin-left: auto;
-  padding: 0;
+  padding: 8px 16px;
+  background: none;
+  border: none;
 }
 
 nav #hamburger.hidden {
@@ -121,6 +172,7 @@ nav ul {
   list-style: none;
   display: none;
   margin-left: auto;
+  padding: 4px 16px;
 }
 
 @media (min-width: 768px) {
@@ -135,7 +187,7 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  padding: 8px;
+  padding: 0 8px;
 }
 
 nav ul li a {
@@ -145,8 +197,8 @@ nav ul li a {
   font-weight: light;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+a:hover,
+a.active {
   color: #fedf00;
 }
 
@@ -158,15 +210,16 @@ nav ul li a.active {
   justify-content: center;
   flex-direction: column;
 
-  padding: 16px;
+  padding: 0 16px;
 
   text-align: center;
 
-  background: url(../img/bg.jpg) no-repeat center center fixed;
+  background: url(../img/bg2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-attachment: scroll;
 }
 
 .top.half {
@@ -174,28 +227,87 @@ nav ul li a.active {
 }
 
 .top h1 {
-  font-size: 200%;
+  font-size: 500%;
   margin: 0;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 100%;
 }
 
 .top h2 {
-  font-weight: 100;
   margin: 8px 0;
+  font-weight: 500;
+  font-size: 120%;
 }
 
 .top.half h1 {
   font-size: 175%;
   margin: 0;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 100%;
 }
 
 .top.half h2 {
-  font-weight: 100;
-  margin: 8px 0;
-  font-size: 16px;
+  font-size: 110%;
+}
+
+.top .container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.container.small {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 8px 16px;
+
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.social-icons a:first-of-type {
+  padding-left: 0;
+}
+
+.social-icons a:first-of-type {
+  padding-right: 0;
+}
+
+@media (min-width: 768px) {
+  .social-icons {
+    left: 0;
+    right: auto;
+    border-top-left-radius: 0;
+  }
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: white;
+  padding: 8px;
+}
+
+.social-icons a.facebook {
+  color: #3b5998;
+}
+
+.social-icons a.yelp {
+  color: #c41200;
+}
+.social-icons a.instagram {
+  color: #e4717a;
+}
+.social-icons a.tripadvisor {
+  color: #00af87;
 }
 
 @media (min-width: 768px) {
@@ -206,11 +318,6 @@ nav ul li a.active {
     line-height: 100%;
   }
 
-  .top h2 {
-    font-weight: 100;
-    margin: 8px 0;
-  }
-
   .top.half h1 {
     font-size: 300%;
     margin: 0;
@@ -219,8 +326,7 @@ nav ul li a.active {
   }
 
   .top.half h2 {
-    font-weight: 100;
-    margin: 8px 0;
     font-size: 100%;
+    margin: 8px 0;
   }
 }
