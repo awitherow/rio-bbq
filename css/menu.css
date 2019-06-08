@@ -1,6 +1,6 @@
 .menu {
   text-align: center;
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 8px;
   position: relative;
@@ -27,9 +27,10 @@
 #quick-scroll ul {
   list-style-type: none;
   padding: 0;
-  max-width: 768px;
+  max-width: 1200px;
   margin: 0 auto;
 }
+
 #quick-scroll ul li {
   display: inline-block;
   margin: 16px 2px;
