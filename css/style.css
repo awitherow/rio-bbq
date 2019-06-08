@@ -234,7 +234,7 @@ a.active {
 }
 
 .top.half {
-  min-height: 50vh;
+  min-height: 66vh;
 }
 
 .top h1 {
@@ -274,7 +274,7 @@ a.active {
 }
 
 .social-icons {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;

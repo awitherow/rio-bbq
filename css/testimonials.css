@@ -1,0 +1,27 @@
+#testimonials {
+  margin: 0 auto;
+  padding: 16px;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.teste {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 16px;
+}
+
+.teste h2,
+.teste p {
+  margin: 8px auto;
+}
+
+.teste img {
+  border-radius: 50%;
+}
